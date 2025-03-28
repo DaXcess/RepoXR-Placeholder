@@ -9,3 +9,9 @@ The R.E.P.O. devs decided to reinvent the way UI interactions work (manual scree
 I'm currently working on implementing the rebinding system. Yes, I know that the game has a built-in rebinding system, but it's kind of meh. The settings menu for it is not dynamic, and they manually create all InputActions using `new InputAction("<binding>");`. I'm working on rebuilding this to just use an `InputActionAsset`, which is eventually placed in a `PlayerInput`.
 
 That's it for now.
+
+# March 28th 2025
+
+Okay so the rebinding system has been fully implemented (I think). Also fixed the scrollbars not working with the VR inputs.
+
+Now on to the more difficult stuff: in-game hands/arms. Not really too sure how I am going to implement this, but I'll see what I can extract from the base game.
