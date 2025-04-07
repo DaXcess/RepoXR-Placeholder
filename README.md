@@ -25,3 +25,10 @@ I did start some work on the arms and got a small tiny very small demo running i
 # April 4th 2025
 
 [**Look at these fuckin' hands**](https://bsky.app/profile/daxcess.io/post/3lly5pmgens2n)
+
+# April 6th 2025
+
+Watched the Minecraft movie.
+
+"Chicken Jockey!"
+"**YEAAAAAAAAAAAAAAAAAAAAAAAAAAH!!**"
