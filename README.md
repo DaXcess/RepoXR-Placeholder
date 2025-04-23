@@ -115,6 +115,8 @@ I fixed most of the small issues described in the previous post, so the flashlig
 
 For some new things, I tried looking into the arrow thing, and I noticed that it doesn't even work on flatscreen? I might just completely scrap that from VR as well, but for now I've delayed working on it until I finish the UI revamp. I started working on the pause menu, which I've already got in a working state, though it's pretty early. It doesn't yet darken the screen, and the "highlight" colors are rotated and scaled completely wrong. But hey, at least the semibot follows your "cursor", which is kinda cool!
 
+![image](https://github.com/user-attachments/assets/b3c69dd2-1ec8-4f7a-b52d-db24837caae5)
+
 I'm hoping I can finish the pause menu today, though it's a workweek so I don't have a lot of time to work on it today.
 
 Also, Spraty made a very cool logo for RepoXR, but I'll keep that a secret until later :)
