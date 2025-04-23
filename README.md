@@ -106,3 +106,15 @@ The UI elements themselves I'm still not too sure on. I can keep a few select el
 And then comes the multiplayer support. I have brainstormed some ideas, but not acted on them yet since I want to finish all the other stuff first. I am most likely gonna hook into the PlayerAvatar PhotonView serialization sequence, and hook that into my own NetworkSystem. I'm most likely going to make it serialize a magic value (to make other clients know that this player has the VR mod), some flags (containing what kind of data is being serialized, if any), and then some data (like "hello I'm VR", or tracking data). This might be a breeze, or it might not be, only time will tell.
 
 Thank you for listening to my TED talk (again).
+
+# April 23rd 2025
+
+Don't worry, will not write a wall of text this time.
+
+I fixed most of the small issues described in the previous post, so the flashlight no longer shoots out of your hand when standing near a wall, the inventory now cannot be used if it's disabled (yes you were able to use the inventory when it was completely disabled before, oops) and made a small change in the crosshair that makes it rotate in a more sane way.
+
+For some new things, I tried looking into the arrow thing, and I noticed that it doesn't even work on flatscreen? I might just completely scrap that from VR as well, but for now I've delayed working on it until I finish the UI revamp. I started working on the pause menu, which I've already got in a working state, though it's pretty early. It doesn't yet darken the screen, and the "highlight" colors are rotated and scaled completely wrong. But hey, at least the semibot follows your "cursor", which is kinda cool!
+
+I'm hoping I can finish the pause menu today, though it's a workweek so I don't have a lot of time to work on it today.
+
+Also, Spraty made a very cool logo for RepoXR, but I'll keep that a secret until later :)
