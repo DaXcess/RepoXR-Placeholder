@@ -120,3 +120,43 @@ For some new things, I tried looking into the arrow thing, and I noticed that it
 I'm hoping I can finish the pause menu today, though it's a workweek so I don't have a lot of time to work on it today.
 
 Also, Spraty made a very cool logo for RepoXR, but I'll keep that a secret until later :)
+
+# April 29th 2025
+
+Another week has passed, hmm time really flies, and once again, a lot has happened, so prepare for another wall of text!
+
+![image](https://github.com/user-attachments/assets/3806d6c9-1a55-4360-a508-cb06c3dfa255)
+
+It should be evident by the name of the commit, but there have been a lot of changes in the past 6 days, lets see if I can still remember all of them (by cheating and looking at the commit).
+
+**UI & Pause Menu**
+
+Yes, I have finally decided on a place for the UI. As the player inventory and map tool are located at like hip-level, I thought why not put at least the statically visible (always visible) UI down there as well? So I placed them there for now. Whether this will stay forever is still a mystery, but chances are pretty high that this is how it will work in the 1.0 release. I have also fixed and fully implemented the pause menu (which I did waaay too late to be honest), so I can finally leave levels and the tutorial without ALT-F4'ing the game every time.
+
+**MULTIPLAYER AAAAAAH!**
+
+Yes, it has been added! Multiplayer support is finally in the mod, and so far it's fully feature complete (except for some bugs, which I still need to iron out). The networking system hijacks the serialization sequence in the `PhysGrabber` component, which at first was supposed to be `PlayerAvatar`, however the way Photon does serialization is that it combines all the components from the same GameObject and does all serialization in one swoop, so I need to use the last element in the list, because otherwise I would break communication with vanilla clients (which would cause crashes and VERY undefined behavior). I made the networking system use a "frame" system, where is frame has a specific use. For example, the `Announcement` frame tells all connected clients (that have the mod installed) that the sender is a VR player, and the `Rig` frame transmits the positions and rotations of the hand. I've also reparented the grabber, flashlight and map tool so that they are properly placed on the hands and rotate the same way as the person holding them. The multiplayer support even shows the map tool on the same hand that the player is holding them, whether that'd be the left or the right hand, it re-parents if the hands are changed!
+
+**Hmm enemememies!**
+
+I had already started working on getting the camera effects in for a few enemies, but they have now all been implemented. The Upscream now also properly makes you look at them when it attacks you, and I have also added a new option that will redcude the impact of force-look events, which makes them only rotate you on the Y axis (the same axis used for snap/smooth turning). Currently no other enemies need specialized VR support, so this means that enemy support is done and finished.
+
+**Thunderstore, why???**
+
+So, there was a funny bug during testing, that made it so that if one player pressed the Interact button, all the players holding items would press the interact button. At first I obviously though that I had just messed up a patch on a function that dealt with item activation, and yes when I completely removed the patch, it stopped behaving this way. Obviously that patch needed to come back, so I had to fix it, but when taking a good look at the patch, I did not make any sense at all that this bug would be introduced. My patch didn't touch that part of the code in the slightest, so why does this happen? Well, it turns out, [**there was a bug in BepInEx**](https://github.com/BepInEx/HarmonyX/issues/82) that caused a patch (even when the patch would do nothing) to replace certain instructions incorrectly, causing undefined behavior, and the undefined behavior in my case was that everyone used their items if only one person used an item. Normally, this would just be a case of "ok just update bepinex and be done", but unfortunately **Thunderstore** is still using a **2 year old** version of BepInEx, which still has this bug... So I had to write a patch, that patches the patcher, before the patcher patches my patches. Anyways, it works now, but might cause some funny stuff if for some reason a mod relies on this bug (which would be very stupid but you never know).
+
+**Roomscale improvements yipeeeee**
+
+I've also added roomscale crouching, and made an improvement to roomscale movement. The roomscale crouching improvement also adds several checks for "illegal heights" which will force the mod to reset the height if it exceeds certain tresholds (like peeking through the floor or ceiling). In LCVR, this check was only added much later, so that allowed players to quite literally fly using playspace hacks, but that will not work out of the box in RepoXR (horizontal playspace hacks still work fine, as long as you're not running into walls, but I do not care enough to add checks for this, it's your gameplay anyways).
+
+The fun thing is, unlike in LCVR, the legs move when you are moving in your playspace, instead of just sliding over the floor. You will still slide if you move slow enough, but in general the game shouldn't really be able to tell the difference between controller movement and physical movement (animation-wise).
+
+**Camera d'custom**
+
+I've also added a custom camera that will be immediately available in the first version. The custom camera is basically just a copy of the three VR cameras (main, UI, top-layer), but with VR rendering disabled, and a higher priority so they show up on the monitor. The custom camera is a much better fit for when you are recording your gameplay, since you have full control over your FOV, and it is properly centered. If you are not recording, it's recommended to keep this disabled, since otherwise it's an unnecessary load on your GPU (with custom camera enabled, there are basically 9 cameras rendering stuff). There is one thing that doesn't work properly with the custom camera, and that's the yellow/red lines you see when you are tumbling. I might re-add these later (which would mean I have to duplicate and re-create them basically), but for now there are no plans to do that.
+
+**Bug spray**
+
+A lot of bugs have also been fixed, too many to list here, but stuff like inventory bugs, lighting bugs, rendering bugs, etc. There are still around 12 TODO's I'm working on (not including TODO's left in the source code), and more TODO's might be added before 1.0.0, so for now I still do not have an indication of when the mod might release, but at least most of the difficult stuff is over, so it shouldn't be any much longer now!
+
+Anyways, I will keep y'all updated!
