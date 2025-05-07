@@ -160,3 +160,51 @@ I've also added a custom camera that will be immediately available in the first 
 A lot of bugs have also been fixed, too many to list here, but stuff like inventory bugs, lighting bugs, rendering bugs, etc. There are still around 12 TODO's I'm working on (not including TODO's left in the source code), and more TODO's might be added before 1.0.0, so for now I still do not have an indication of when the mod might release, but at least most of the difficult stuff is over, so it shouldn't be any much longer now!
 
 Anyways, I will keep y'all updated!
+
+# May 7th 2025
+
+More time passed, more changes happened, lets cut right to the chase.
+
+**Settings Menu**
+
+I've finally added the settings menu, where you can change most settings, both in flatscreen and in VR, and most of these settings apply immediately without needing restarts. This took quite some time to implement, since I had to manually recreate the UI as it is made in the base game.
+
+**Custom Tumble UI**
+
+Because the Tumble UI is displayed in a Screen Space Camera canvas, it is not visible when using the custom camera. So to account for this, I've created a clone of the Tumble UI which is displayed on the screen when the custom camera is enabled. Speaking of the Tumble UI, there was a bug, or rather design issue, that caused it to only look normal on my specific headset with my specific VD settings. This has now been fixed, and now it will only look off when using extreme resolutions (so very tiny, or extremely large, both of which are unplayable anyways).
+
+**Interactor Occlusion**
+
+Putting your hand into a wall will now prevent it from picking up items. This fixes an issue/exploit where you can grab items through walls. If you are already holding an item, you will still keep holding it even when you're intersecting with a wall. You just cannot pickup any **new** items when your hand is occluded.
+
+**Camera Effcts**
+
+This game has quite a few camera effects that it uses to make the game more immersive on flatscreen, however these effects can be quite nauseating and uncomfortable in VR. To account for this, I've reduced a few of the camera effects by 75% (which can be reduced even further in the game's base settings), and other effects have been disabled completely.
+
+**BETA!**
+
+Semiwork has released a public beta for the upcoming R.E.P.O. update. This beta kind of threw a wrench into the development of the VR mod, since I now have to account for more UI, and need to design and implement a whole new feature: Expressions.
+
+The first thing the beta made more difficult was the fact that there's now multiple places in the game where a keyboard is required, for example to create a lobby you need to fill in a password (or leave it empty), and to search for lobbies, and probably more stuff as well. I already needed to add a keyboard into the game anyways, but this now needed to be fast tracked since you otherwise were not able to create a private lobby (as the UI for it was also invisible to begin with).
+
+Another feature, overcharge, seems to work perfectly already, which is nice! I am most likely going to move the overchange UI to a different spot, but otherwise this needed no changes in VR at all!
+
+**Player Stats**
+
+Normally, when you pick up the map, you can see your player stats. This didn't work in VR yet, and even if it did, it would be quite annoying to look at, since the map is held by either of your hands, but the UI would be somewhere completely different. So I've decided to mount the stats to the map tool, so when picking it up, the stats slide out of the map display. Depending on which hand is used to pick up the map, the text will be displayed either on the left side, or the right side.
+
+**CH-CH-CH-CHAT!**
+
+Something I refrained from adding in LCVR and CWVR (did CW even have a text chat?), was the chat. Well in R.E.P.O. the chat is just too goofy to *not* implement, so I decided to create it anyways. One reason that makes the chat in R.E.P.O. significantly easier is that there's no chat history, so no annoying UI to deal with. The chat, once displayed, is gone, and ready for the next message. Another reason that I wanted to add the chat in the VR mod was because your chat can be "possessed", and I did want that to be visible.
+
+So I have added the chat, and it even has the "previous" and "next" functionality, so you can easily repeat a message without having to type it out again (which takes, uhh, a bit longer than on PC). Chat commands like `/greenscreen` also seem to work fine in VR!
+
+**Spectating**
+
+Okay, it's not as good as it is in LCVR, but at least spectating now works in VR! It still uses an orbital camera (which can be controlled using the movement joystick), and you are also able to turn the camera with snap/smooth turn, just like when playing the game. Not a lot I can say about this, it's a very simple "slap VR on it" fix.
+
+**What's next?**
+
+Well, not a lot, for real this time. Expressions are most likely the biggest feature that needs to be added before release. I also still have my "secret flashlight feature" that I need to implement, but I think that won't take a lot of time. Once those two are done, it's basically only miscellaneous stuff, like haptic feedback, and maybe some visual changes, but other than that, the mod might be finished.
+
+As always, you'll hear from me.
