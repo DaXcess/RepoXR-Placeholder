@@ -187,7 +187,7 @@ Semiwork has released a public beta for the upcoming R.E.P.O. update. This beta 
 
 The first thing the beta made more difficult was the fact that there's now multiple places in the game where a keyboard is required, for example to create a lobby you need to fill in a password (or leave it empty), and to search for lobbies, and probably more stuff as well. I already needed to add a keyboard into the game anyways, but this now needed to be fast tracked since you otherwise were not able to create a private lobby (as the UI for it was also invisible to begin with).
 
-Another feature, overcharge, seems to work perfectly already, which is nice! I am most likely going to move the overchange UI to a different spot, but otherwise this needed no changes in VR at all!
+Another feature, overcharge, seems to work perfectly already, which is nice! I am most likely going to move the overcharge UI to a different spot, but otherwise this needed no changes in VR at all!
 
 **Player Stats**
 
