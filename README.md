@@ -208,3 +208,5 @@ Okay, it's not as good as it is in LCVR, but at least spectating now works in VR
 Well, not a lot, for real this time. Expressions are most likely the biggest feature that needs to be added before release. I also still have my "secret flashlight feature" that I need to implement, but I think that won't take a lot of time. Once those two are done, it's basically only miscellaneous stuff, like haptic feedback, and maybe some visual changes, but other than that, the mod might be finished.
 
 As always, you'll hear from me.
+
+EDIT: Oh almost forgot, the mod will be targeting the upcoming R.E.P.O. version, so if the mod is finished before then, it will be delayed until the update comes out of beta.
