@@ -219,7 +219,7 @@ Few days have passed, and a few features have been added.
 
 **Expressions**
 
-Expressions are in! With some input from others, I've decided to create a radial menu containing all 6 expressions that are currently in the game. When enabling an expression, it will stay enabled for the entire duration of the session (even if the scene changes when going to the shop for example). This technically means that you can use the expressions as a part of your "permanent" appearance. To open the expressions menu, you will have to hold down the chat button (which has now gotten a default keybind), and after around half a second, the radial menu opens on whichever hand had the chat button.
+Expressions are in! With some input from others, I've decided to create a radial menu containing all 6 expressions that are currently in the game. When enabling an expression, it will stay enabled for the entire duration of the session (even if the scene changes when going to the shop for example). Of course, you can also disable any expressions that you enabled. This technically means that you can use the expressions as a part of your "permanent" appearance. To open the expressions menu, you will have to hold down the chat button (which has now gotten a default keybind), and after around half a second, the radial menu opens on whichever hand had the chat button.
 
 **Secret flashlight feature**
 
