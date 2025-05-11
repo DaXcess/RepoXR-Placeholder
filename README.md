@@ -210,3 +210,23 @@ Well, not a lot, for real this time. Expressions are most likely the biggest fea
 As always, you'll hear from me.
 
 EDIT: Oh almost forgot, the mod will be targeting the upcoming R.E.P.O. version, so if the mod is finished before then, it will be delayed until the update comes out of beta.
+
+# May 11th 2025
+
+<sup><sub>This is it, I think it's over</sub></sup>
+
+Few days have passed, and a few features have been added.
+
+**Expressions**
+
+Expressions are in! With some input from others, I've decided to create a radial menu containing all 6 expressions that are currently in the game. When enabling an expression, it will stay enabled for the entire duration of the session (even if the scene changes when going to the shop for example). This technically means that you can use the expressions as a part of your "permanent" appearance. To open the expressions menu, you will have to hold down the chat button (which has now gotten a default keybind), and after around half a second, the radial menu opens on whichever hand had the chat button.
+
+**Secret flashlight feature**
+
+I don't know why I'm still keeping this a secret lol, I think the expressions wheel is more impressive than this feature. When the mod releases, it will be listed under the special VR features so until then it will stay a secret.
+
+**Aaaaaaaand?**
+
+Nothing, this is it. I've added everything I wanted to add before release. Now it's just waiting until Semiwork releases the update before the mod will go public. This hopefully gives me enough time to both create a trailer (I already have an idea for what that will look like), and revamp the Discord (which I don't yet have a clear idea for). For the mod itself, I will probably hold a few more private playtests to find some final small bugs that can be ironed out before the release. Until then, this might be the last update for a while.
+
+Ugh I think I need like a 6 month break from coding lol.
