@@ -230,3 +230,31 @@ I don't know why I'm still keeping this a secret lol, I think the expressions wh
 Nothing, this is it. I've added everything I wanted to add before release. Now it's just waiting until Semiwork releases the update before the mod will go public. This hopefully gives me enough time to both create a trailer (I already have an idea for what that will look like), and revamp the Discord (which I don't yet have a clear idea for). For the mod itself, I will probably hold a few more private playtests to find some final small bugs that can be ironed out before the release. Until then, this might be the last update for a while.
 
 Ugh I think I need like a 6 month break from coding lol.
+
+# May 19th 2025
+
+Wow, turned out it wasn't over yet!
+
+We have another week that has passed, and for a change, I'm not going to talk about the VR mod right out of the gate!
+
+**Stuff surrounding the mod**
+
+Because Semiwork hasn't published the new update yet, I've been working on a little trailer for the VR mod. This has taken way longer than anticipated, but that was mostly because I needed more people to be able to both record and play at the same time. I have now finally "finished" the trailer (some small stuff needs to be added, and some title cards, and maybe a little gameplay to show people what the mod looks like).
+
+I've also been preparing the Discord server a little bit. It's nowhere near finished, but stuff like new logo's and banners are ready to replace the LCVR ones. The Discord server will hold both LCVR and RepoXR, so the logo's and banners have been made to include stuff from both these games/mods. A few new categories have already been made, but for now are still hidden from other people. Once the mod goes live, all the new channels will go public.
+
+**For the mod itself**
+
+Semiwork did publish a new beta version, adding a few things: Expression overrides (Boombox), a gumball machine and of course: the cart cannons.
+
+The gumball machine was by far the easiest to implement in VR: I literally didn't have to do anything, and it worked! Though there was one small rendering issue, which was fixed with one line of code (the hypnosis UI would render behind the arms, but in front of everything else, so it has been changed to render in front of everything, including the hands).
+
+The cart cannons were also very easy. These basically also worked without touching anything, though not unlike the cart, they "steer" based on your head rotation, so I had to patch it to rotate based on your hand rotation. I believe this patch also breaks down if the host does not have the VR mod, so keep that in mind (especially when joining public lobbies, where it's almost guaranteed that the host doesn't have the VR mod).
+
+Last but not least: expression overrides. This new beta version made the boombox force your player to perform expression 4, which is the "eyes closed" expression. I made a few changes to the radial menu, so that it now also shows up while any forced expressions are active. The menu itself will now also show any overridden expressions, and you can no longer toggle these until the override is turned off (aka just drop the boombox). AFAIK the boombox is the only thing in the game that forces an expression, though I have not checked the code for any other places where it might be triggered (even though it's very easy to do so).
+
+Oh, almost forgot about this: Since I have more than enough time left before Semiwork publishes the update, I added a left-handed mode! This left-handed mode also works in multiplayer, and you can swap hands at any time, even during a session! The one small downside is that you will have to manually rebind your controls, as there are no official left-handed bindings. This is relatively easy though as you can rebind your controls at any time, using the settings menu.
+
+**So what now (again)?**
+
+Well, I'm going to spend a bit more time polishing the trailer, performing a few more playtests, and revamping the Discord, and once I'm pretty much satisfied with all of it, I'm most likely going to make the beta (for the VR mod) accessible to more people. As long as Semiwork doesn't release the update to stable, the mod will still be somewhat private, though hopefully it won't take long before they actually release it.
