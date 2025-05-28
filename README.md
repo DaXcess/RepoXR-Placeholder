@@ -1,5 +1,8 @@
 # R.E.P.O. VR Mod Placeholder
 
+> [!NOTE]
+> **The RepoXR GitHub repository is now public: [*DaXcess/RepoXR*](https://github.com/DaXcess/RepoXR)**
+
 This repo(sitory) is a temporary placeholder for the R.E.P.O. VR mod
 
 Progress is slower than usual, as I do not have a lot of free time on my hands, and the free time I do have, I have to balance between building the mod, playing other games (Outer Wilds is pretty awesome), and playing games with friends (ironically, R.E.P.O. is one of them).
